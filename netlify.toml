@@ -1,0 +1,13 @@
+[build]
+  base = "vue-p"
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18.19.0"
+  NPM_VERSION = "10.2.3"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 

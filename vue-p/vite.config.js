@@ -14,6 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      vue: 'vue/dist/vue.esm-bundler.js',
     },
   },
   build: {
@@ -29,6 +30,7 @@ export default defineConfig({
         manualChunks: {
           'vue-vendor': ['vue', 'vue-router'],
           'element-plus-vendor': ['element-plus'],
+          'echarts-vendor': ['echarts'],
         },
       },
     },
